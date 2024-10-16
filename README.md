@@ -28,4 +28,10 @@ These instructions will help you get a copy of the project up and running on you
 1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/template-engine.git
-   cd template-engine
+   cd Weather-App-HBS
+
+2.Install dependencies:
+   npm install
+
+3.Start the project:
+   npm run start
