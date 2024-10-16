@@ -27,7 +27,7 @@ These instructions will help you get a copy of the project up and running on you
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/template-engine.git
+   git clone https://github.com/diaaqassem/Weather-App-HBS.git
    cd Weather-App-HBS
 
 2.Install dependencies:
