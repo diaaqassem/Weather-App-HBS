@@ -1,0 +1,45 @@
+* {
+  overflow-x: hidden;
+  font-family: "Times New Roman", Times, serif;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+}
+.links {
+  top: 0px;
+}
+
+.links a {
+  text-decoration: none;
+}
+
+img {
+  width: 15%;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.img-team {
+  width: 15%;
+}
+
+h3 {
+  width: 100%;
+  background: #000;
+  margin: auto;
+}
+
+footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
+.border-danger {
+  border: 2px solid red !important;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="text-center">
+    <h1>{{>header}}</h1>
+    <h2>Describtion is : {{desc}}</h2>
+    <img src={{img}} alt="rfrf" class="img-fluid text-center">
+    <div class="container border-2 border-danger rounded my-2">
+    <form id="form" class="my-5 d-flex align-items-center justify-content-center ">
+        <input type="text" class="form-check-input w-25 rounded h-100 text-bg-primary m-2 p-2" id="address">
+        <button  class="btn btn-primary ">Submit</button>
+    </form>
+    <p id="location" class=" text-light">location is : </p>
+    <p id="forecast" class=" text-primary">forecast is : </p>
+    <p id="error" class=" text-bg-danger" ></p>
+    </div>
+    <footer>
+        <h3>{{>footer}}</h3>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
+
+
+
+import java.util.Scanner;
+
+class StudentGrade {
+    private double s1, s2, s3, s4;
+
+    public StudentGrade(double s1, double s2, double s3, double s4) {
+        this.s1 = s1;
+        this.s2 = s2;
+        this.s3 = s3;
+        this.s4 = s4;
+    }
+
+    public double calculateAverage() {
+        return (s1 + s2 + s3 + s4) / 4;
+    }
+
+    public void printRemarks() {
+        double avg = calculateAverage();
+
+        System.out.println("The average is = " + avg);
+
+        if (avg <= 100 && avg >= 90)
+            System.out.println("Congratulations.");
+        else if (avg < 90 && avg >= 80)
+            System.out.println("Featured.");
+        else if (avg < 80 && avg >= 70)
+            System.out.println("Superior.");
+        else if (avg < 70 && avg >= 65)
+            System.out.println("Diligent.");
+        else
+            System.out.println("LOW Rate Warning..!");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Please Enter your grade in the s 1: ");
+        double s1 = scanner.nextDouble();
+        System.out.println("Please Enter your grade in the s 2: ");
+        double s2 = scanner.nextDouble();
+        System.out.println("Please Enter your grade in the s 3: ");
+        double s3 = scanner.nextDouble();
+        System.out.println("Please Enter your grade in the s 4: ");
+        double s4 = scanner.nextDouble();
+
+        // Create an instance of the StudentGrade class
+        StudentGrade studentGrade = new StudentGrade(s1, s2, s3, s4);
+
+        // Print remarks based on the average grade
+        studentGrade.printRemarks();
+    }
+}
